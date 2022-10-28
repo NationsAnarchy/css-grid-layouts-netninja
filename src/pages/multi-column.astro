@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Multi-column Layout">
+  <header>
+    <h1>Globe Roamers</h1>
+  </header>
+  <main class="grid-container">
+    <article class="featured">
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/starter-files/2%20-%20multi-column/img/1.png"
+        alt="Featured image"
+      />
+      <div>
+        <h2>Balloon Magic</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sed hic
+          enim excepturi velit obcaecati. Rerum nostrum dolor dolorum laudantium
+          obcaecati, animi eius quod, doloribus nisi ipsa maiores! Omnis
+          explicabo nisi consequatur deleniti, saepe harum? Cum asperiores, vero
+          dignissimos optio in deserunt autem atque itaque, a nemo, ullam
+          voluptas molestiae!
+        </p>
+      </div>
+    </article>
+    <article>
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/starter-files/2%20-%20multi-column/img/1.png"
+        alt="article image"
+      />
+      <div>
+        <h3>Balloon Magic</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          voluptates a, ab, impedit possimus aliquid consequatur, deserunt
+          cumque quidem eligendi voluptatum vero facere praesentium. Tempora
+          beatae saepe iure! Corrupti, laboriosam!
+        </p>
+      </div>
+    </article>
+    <article>
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/starter-files/2%20-%20multi-column/img/2.png"
+        alt="article image"
+      />
+      <div>
+        <h3>Road to freedom</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+          ratione tenetur quibusdam explicabo quae nobis tempore cumque autem,
+          odit beatae ipsam minima quam ut quasi exercitationem hic architecto
+          eum. Impedit!
+        </p>
+      </div>
+    </article>
+    <article>
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/starter-files/2%20-%20multi-column/img/3.png"
+        alt="article image"
+      />
+      <div>
+        <h3>The clear blue</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+          doloribus omnis laboriosam! Magnam similique accusamus illum quos.
+          Non, eveniet sint molestiae libero reprehenderit magnam blanditiis
+          nam, harum vel aspernatur iste.
+        </p>
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  body {
+    margin: 20px;
+  }
+
+  ul,
+  li {
+    padding: 0;
+    list-style-type: none;
+  }
+  h1,
+  h2,
+  h3 {
+    color: #767f7e;
+  }
+  p {
+    color: #828b8a;
+  }
+
+  header {
+    max-width: 1200px;
+    margin: 40px auto;
+    border-bottom: 1px solid #bbc7c7;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+
+  article.featured {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid #bbc7c7;
+    padding-bottom: 40px;
+  }
+
+  article img,
+  article.featured img {
+    width: 100%;
+    border: 4px solid #fff;
+    border-radius: 8px;
+  }
+
+  article p,
+  article h3 {
+    margin: 20px 10px;
+  }
+
+  /* responsive */
+  @media screen and (max-width: 980px) {
+    article {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    article,
+    article.featured {
+      display: block;
+      margin: 0 20px;
+    }
+  }
+</style>

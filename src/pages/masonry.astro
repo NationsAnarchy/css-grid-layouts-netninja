@@ -1,0 +1,193 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Masonry">
+  <header>
+    <nav>
+      <a href="">Home</a>
+      <a href="">Articles</a>
+      <h1>
+        <div>Express</div>
+        <div>Yourself</div>
+      </h1>
+      <a href="">Guides</a>
+      <a href="">Contacts</a>
+    </nav>
+  </header>
+  <main>
+    <div class="short">
+      <h3>A note about style</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+        veritatis. Iure, voluptatem? Fugit, enim reprehenderit rem tenetur
+        magnam esse accusantium.
+      </p>
+      <a href="">Read more</a>
+    </div>
+    <div class="tall">
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/finished-files/4%20-%20masonry/img/1.png"
+        alt="model"
+      />
+    </div>
+    <div class="short">
+      <h3>A note about style</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ad?
+        Sequi nobis officia saepe labore dignissimos nulla laboriosam voluptatem
+        voluptatum!
+      </p>
+      <a href="">Read more</a>
+    </div>
+    <div class="tall">
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/finished-files/4%20-%20masonry/img/2.png"
+        alt="model"
+      />
+    </div>
+    <div class="tall">
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/finished-files/4%20-%20masonry/img/3.png"
+        alt="model"
+      />
+    </div>
+    <div class="tall">
+      <h3>A note about style</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio laborum
+        enim commodi velit nobis nesciunt magni quibusdam doloremque facilis
+        quis.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi vitae non
+        ut nemo quibusdam deleniti vel provident suscipit voluptate neque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cum
+        reiciendis et cumque voluptas odio enim culpa neque error! Dicta!
+      </p>
+      <a href="">Read more</a>
+    </div>
+    <div class="tall">
+      <img
+        src="https://raw.githubusercontent.com/iamshaunjp/css-grid-layouts/finished-files/4%20-%20masonry/img/1.png"
+        alt="model"
+      />
+    </div>
+    <div class="short">
+      <h3>A note about style</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita
+        doloribus unde temporibus recusandae ex alias perferendis nam? Ratione,
+        voluptates.
+      </p>
+      <a href="">Read more</a>
+    </div>
+    <div class="short">
+      <h3>A note about style</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum fuga
+        aspernatur non accusamus, tenetur quia iste perspiciatis nulla maiores
+        rerum!
+      </p>
+      <a href="">Read more</a>
+    </div>
+  </main>
+  <footer></footer>
+</Layout>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: #f7f7f7;
+  }
+
+  header {
+    background: #fff;
+    padding: 10px;
+  }
+
+  nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  nav h1 {
+    text-transform: uppercase;
+    line-height: 1.25em;
+  }
+
+  nav h1 div:first-child {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
+  nav h1 div:last-child {
+    font-weight: 400;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 30px;
+  }
+
+  main div {
+    overflow: hidden;
+    background: white;
+    border-radius: 6px;
+    border: 16px solid #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  main img {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  main .short {
+    grid-row: span 1;
+  }
+
+  main .tall {
+    grid-row: span 2;
+  }
+
+  @media screen and (max-width: 960px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    main {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    nav {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav h1 {
+      grid-column: 1 / span 4;
+      grid-row: 1;
+    }
+  }
+</style>
